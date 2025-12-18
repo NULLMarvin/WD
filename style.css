@@ -1,0 +1,303 @@
+/* General & Typography */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #444;
+}
+
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+    color: #4a2c1f;
+}
+
+a {
+    text-decoration: none;
+    color: #8b5e3c;
+    transition: color 0.3s;
+}
+
+/* 1. Navigation Bar (Flexbox) */
+.navbar {
+    background-color: #4a2c1f;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar .logo {
+    color: white;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.navbar nav a {
+    color: #e0d5c2;
+    margin-left: 25px;
+    padding: 5px 0;
+    font-weight: 700;
+}
+
+.navbar nav a:hover {
+    color: #fff;
+    border-bottom: 2px solid #fff;
+}
+
+/* 2. Hero Section */
+.hero-section {
+    background: url('images/hero-bg.jpg') no-repeat center center/cover;
+    min-height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 800px;
+}
+
+.hero-content h1 {
+    font-size: 3.5em;
+    margin-bottom: 0.2em;
+}
+
+.hero-content p {
+    font-size: 1.3em;
+    margin-bottom: 25px;
+}
+
+.cta-button {
+    background-color: #8b5e3c;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-weight: 700;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #4a2c1f;
+}
+
+/* 3. Menu Section (CSS Grid) */
+.menu-section {
+    padding: 60px 5%;
+    text-align: center;
+    background-color: #e0d5c2;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Default: 3 columns for desktop */
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.menu-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.menu-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.menu-item h3 {
+    margin: 0;
+    color: #8b5e3c;
+    font-size: 1.5em;
+}
+
+.menu-item .price {
+    display: block;
+    font-weight: 700;
+    color: #e74c3c;
+    margin-top: 10px;
+    font-size: 1.1em;
+}
+
+/* 4. Testimonials Section (Flexbox) */
+.testimonials-section {
+    padding: 60px 5%;
+    text-align: center;
+    background-color: #f7f7f7;
+}
+
+.testimonial-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.testimonial-card {
+    background-color: white;
+    padding: 30px;
+    border-left: 5px solid #8b5e3c;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    max-width: 450px;
+    text-align: left;
+}
+
+.testimonial-card i.fa-quote-left {
+    color: #8b5e3c;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.testimonial-card p {
+    font-style: italic;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.testimonial-card cite {
+    display: block;
+    font-weight: 700;
+    color: #4a2c1f;
+    margin-top: 10px;
+}
+/* 5. Contact Section (Flexbox for two-column layout) */
+.contact-section {
+    display: flex;
+    padding: 60px 5%;
+    gap: 40px;
+    background-color: #e0d5c2;
+}
+
+.contact-info, .map-placeholder {
+    flex: 1;
+}
+
+.map-placeholder {
+    background-color: #ddd;
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    color: #666;
+}
+
+/* 6. Footer */
+footer {
+    background-color: #333;
+    color: #e0d5c2;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.8em;
+}
+
+/* ------------------------------------------------------------------ */
+/* 🚀 Responsive Design Breakpoints */
+/* ------------------------------------------------------------------ */
+
+/* 1. Tablet View (Max-width: 992px) */
+@media (max-width: 992px) {
+    /* Menu Section: Change 3-column grid to 2-column grid */
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Hero Section: Slightly reduce heading size */
+    .hero-content h1 {
+        font-size: 3em;
+    }
+}
+
+
+/* 2. Mobile View (Max-width: 768px) */
+@media (max-width: 768px) {
+    /* Navigation Bar: Stack items vertically */
+    .navbar {
+        flex-direction: column;
+        padding: 10px 5%;
+    }
+
+    .navbar nav {
+        margin-top: 10px;
+        text-align: center;
+    }
+    
+    .navbar nav a {
+        margin: 0 15px; /* Adjust spacing for stacked links */
+        display: inline-block;
+        padding: 5px;
+    }
+    
+    /* Hero Section: Further reduce heading size and padding */
+    .hero-content {
+        padding: 30px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+    
+    .hero-content p {
+        font-size: 1.1em;
+    }
+
+    /* Menu Section: Change 2-column grid to 1-column stack */
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Testimonials Section: Stack testimonial cards vertically */
+    .testimonial-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Contact Section: Stack info and map vertically */
+    .contact-section {
+        flex-direction: column;
+    }
+    
+    .contact-info, .map-placeholder {
+        width: 100%; /* Ensure full width on stack */
+    }
+}
+
+
+/* 3. Small Mobile View (Max-width: 576px) */
+@media (max-width: 576px) {
+    /* Hero Section: Smallest heading size */
+    .hero-content h1 {
+        font-size: 2em;
+    }
+    
+    /* General Padding: Reduce section padding slightly */
+    .menu-section, .testimonials-section, .contact-section {
+        padding: 40px 3%;
+    }
+
+    /* Navigation: Make nav links display block for better touch targets */
+    .navbar nav a {
+        display: block;
+        margin: 5px 0;
+    }
+}
