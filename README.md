@@ -2,7 +2,7 @@
 
 This repository hosts a comprehensive CSS stylesheet designed for a modern coffee shop/café website. The project is **fully responsive**, ensuring the layout adapts seamlessly across any device—desktop, tablet, or mobile.
 
-<a href="https://marv1ndevv.github.io/WD_Assignment3/" target="_blank" rel="noopener noreferrer">Live Preview</a>
+<a href="https://nullmarvin.github.io/WD/" target="_blank" rel="noopener noreferrer">Live Preview</a>
 
 ## ✨ Key Features
 
